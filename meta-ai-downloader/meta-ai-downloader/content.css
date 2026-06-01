@@ -1,0 +1,100 @@
+/* Meta AI Media Downloader - Inject Button Styles */
+
+.metaai-dl-btn {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  z-index: 2147483647;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+
+  background: linear-gradient(135deg, rgba(0,112,255,0.85), rgba(0,194,255,0.85));
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 12px;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow:
+    0 4px 20px rgba(0,112,255,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+
+  opacity: 0;
+  transform: translateY(8px) scale(0.96);
+}
+
+/* Container hover'da butonu goster */
+.group:hover .metaai-dl-btn,
+[class*="group"]:hover .metaai-dl-btn,
+*:hover > .metaai-dl-btn,
+.metaai-dl-btn:hover,
+.metaai-dl-btn:focus {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.metaai-dl-btn:hover {
+  background: linear-gradient(135deg, rgba(0,112,255,0.95), rgba(0,210,255,0.95));
+  border-color: rgba(255,255,255,0.6);
+  box-shadow:
+    0 8px 28px rgba(0,112,255,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.35);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.metaai-dl-btn:active {
+  transform: scale(0.97) translateY(0);
+  transition-duration: 0.1s;
+}
+
+.metaai-dl-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+}
+
+/* Loading state */
+.metaai-dl-btn.loading {
+  opacity: 1;
+  background: linear-gradient(135deg, rgba(40,40,45,0.9), rgba(60,60,70,0.9));
+  cursor: not-allowed;
+  pointer-events: none;
+  border-color: rgba(255,255,255,0.15);
+}
+
+.metaai-dl-btn.loading svg.spin {
+  animation: metaai-spin 0.7s linear infinite;
+}
+
+@keyframes metaai-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Success state */
+.metaai-dl-btn.success {
+  opacity: 1;
+  background: linear-gradient(135deg, rgba(22,163,74,0.9), rgba(34,197,94,0.9));
+  border-color: rgba(255,255,255,0.4);
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(22,163,74,0.4);
+}
+
+/* Error state */
+.metaai-dl-btn.error {
+  opacity: 1;
+  background: linear-gradient(135deg, rgba(220,38,38,0.9), rgba(239,68,68,0.9));
+  border-color: rgba(255,255,255,0.4);
+  box-shadow: 0 4px 20px rgba(220,38,38,0.4);
+}

@@ -1,0 +1,24 @@
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (if added later)
+node_modules/
+package-lock.json
+
+# Build outputs (if added later)
+dist/
+build/
+
+# Logs
+*.log
+
+# Temp
+*.tmp
+*.zip
