@@ -26,7 +26,7 @@ Below are the exact prompts I gave to the AI (Cascade) to build this extension f
 
 ### Prompt 1 — Analyze & Plan
 
-> "meta 4 klasorunu incele orada chrome eklentisi var. bu eklentiyi gelistirecegiz ve github a yukliyecegiz"
+> "Examine the meta4 folder, there is a Chrome extension inside. We will develop this extension and push it to GitHub."
 
 **What it did:**
 - Scanned the existing `meta-ai-downloader` extension
@@ -37,7 +37,7 @@ Below are the exact prompts I gave to the AI (Cascade) to build this extension f
 
 ### Prompt 2 — Feature Request (Side Panel + Images + Better UI)
 
-> "bu eklentiye tiklayinca goruntude verdigim gibi sag tarafta kucuk bir pencere olarak gozuksun. normalde video yakaliyor ama artik gorsel de yakalayacak yani indirecek. videolarin ve gorsellerin uzerinde download butonunu biraz daha guzel yapabiliriz"
+> "When clicking this extension, it should appear as a small window on the right side like shown in the image. It currently catches videos, but now it should also catch and download images. We can also make the download button on videos and images a bit nicer."
 
 **What it did:**
 - Replaced popup with Chrome **Side Panel** API (vidIQ-style right panel)
@@ -51,7 +51,7 @@ Below are the exact prompts I gave to the AI (Cascade) to build this extension f
 
 ### Prompt 3 — GitHub Push & Documentation
 
-> "ne gerekiyorsa olustur kullaniciya yardim et yuklemesi icin filan detaylari iceren dosyalari yaz. https://github.com/cafermutluozkan/meta-ai-media-downloader buraya pushla"
+> "Create everything needed — help the user with files containing details for installation, etc. Push to this GitHub repo: https://github.com/cafermutluozkan/meta-ai-media-downloader"
 
 **What it did:**
 - Created `README.md` with installation steps, features, tech stack
